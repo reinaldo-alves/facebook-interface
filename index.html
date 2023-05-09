@@ -1,348 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Facebook - login</title>
+    <link rel="stylesheet" href="./styleslogin.css" />
 </head>
 <body>
-    <header>
-        <div class="logo-search-container">
-            <img src="./facelogo.jpg" />
-            <div class="search-container">
-                <img src="./search.png" />
-                <input placeholder="Pesquisar no Facebook" />
+    <div class="info-container">
+        <div class="info-content">
+            <div class="logo-container">
+                <img src="./facebook-logo.png" />
+                <p>Connect with friends and the world around you on Facebook</p>
             </div>
-        </div>
-        <div class="pages-container">
-            <div class="pages-icon-container"><img src="./home.png" /></div>
-            <div class="pages-icon-container"><img src="./yourvideos.png" /></div>
-            <div class="pages-icon-container"><img src="./marketplace.png" /></div>
-            <div class="pages-icon-container"><img src="./grupo.png" /></div>
-            <div class="pages-icon-container"><img src="./game.png" /></div>
-        </div>
-        <div class="buttons-container">
-            <div class="button-border"><img src="./menu-de-pontos.png" /></div>
-            <div class="button-border"><img src="./mensageiro.png" /></div>
-            <div class="button-border"><img src="./packard-bell.png" /></div>
-            <div class="button-border"></div>
-        </div>
-    </header>
-    <div class="content">
-        <div class="side-menu left">
-            <div class="menu-section com-borda">
-                <div class="menu-item">
-                    <img class="img-redonda" src="./profissao-programador.jpg" />
-                    <span>Profissão Programador</span>
+            <div class="form-container">
+                <div class="form">
+                    <input type="text" placeholder="Email or phone number" />
+                    <input type="password" placeholder="Password" />
+                    <a href="./feed.html"><button class="login-button">Log In</button></a>
+                    <span>Forgot password?</span>
+                    <button class="create-button">Create new account</button>
                 </div>
-                <div class="menu-item">
-                    <img src="./amigos.png" />
-                    <span>Amigos</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./mais-recente.png" />
-                    <span>Mais Recentes</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./grupo.png" />
-                    <span>Grupos</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./marketplace.png" />
-                    <span>Marketplace</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./yourvideos.png" />
-                    <span>Watch</span>
-                </div>
-                <div class="menu-item">
-                    <div class="button-border">
-                        <img src="./arrow-down.png" />
-                    </div>
-                    <span>Ver mais</span>
-                </div>
-            </div>
-            <div class="menu-section">
-                <span class="section-title">Seus Atalhos</span>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./canal-astronomia.png" />
-                    <span>Canal Astronomia</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./canal-filmes.png" />
-                    <span>Canal Filmes</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./canal-game.png" />
-                    <span>Canal Games</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./canal-musica.png" />
-                    <span>Canal Música</span>
-                </div>
-                <div class="menu-item">
-                    <img src="./canal-negocios.png" />
-                    <span>Canal Negócios</span>
-                </div>
-            </div>
-            <div class="credits">
-                <span class="credit-item">Privacidade</span>
-                <span class="credit-item">Termos</span>
-                <span class="credit-item">Publicidade</span>
-                <span class="credit-item">Escolhas para</span>
-                <span class="credit-item">anúncios</span>
-                <span class="credit-item">Cookies</span>
-                <span class="credit-item">Mais</span>
-                <span class="credit-item">Meta © 2023</span>
-            </div>
-        </div>
-        <div class="posts-container">
-            <div class="header-posts">
-                <div class="post-input-container">
-                    <img src="./profissao-programador.jpg" />
-                    <div class="search-container">
-                        <input placeholder="No que você está pensando, Profissão Programador?" />
-                    </div>
-                </div>
-                <div class="post-options-container">
-                    <div class="post-option">
-                        <img src="./video.png" />
-                        <span>Vídeo ao vivo</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./photo-and-video.png" />
-                        <span>Foto/vídeo</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./rir.png" />
-                        <span>Sentimento/atividade</span>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="title-post-container">
-                    <img class="post-avatar" src="./ne10.png" />
-                    <div class="post-texts">
-                        <span class="post-title">NE10</span>
-                        <span class="post-time">2 de maio às 03:00 · Public</span>
-                    </div>
-                    <div class="medium-button-border"><img src="./mais-opcoes.png" /></div>
-                    <div class="medium-button-border"><img src="./remover.png" /></div>
-                </div>
-                <div class="post-description">
-                    <span>A grande bigtech Google está oferecendo 120 mil bolsas de estudo na área de tecnologia. Os cursos são para pessoas que ainda estão cursando o Ensino Médio, universitários ou até mesmo quem busca o primeiro emprego na área. As bolsas estão disponíveis no site do Centro de Integração Empresa Escola (CIEE) e na plataforma Bettha, que prioriza pessoas de baixa renda, mulheres, comunidades indígenas, pessoas LGBTQIAP+ e moradores das regiões Norte e Nordeste.</span>
-                </div>
-                <img class="post-image" src="./post1.png" />
-                <div class="post-info">
-                    <div class="likes-container">
-                        <img src="./gostar.png" />
-                        <span>75</span>
-                    </div>
-                    <div class="com-container">
-                        <span>9 comentários</span>
-                        <span>12 compartilhamentos</span>
-                    </div>
-                </div>
-                <div class="post-buttons">
-                    <div class="post-option">
-                        <img src="./gostar2.png" />
-                        <span>Curtir</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./mensagem.png" />
-                        <span>Comentar</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./compartilhar.png" />
-                        <span>Compartilhar</span>
-                    </div>
-                    <div class="post-option">
-                        <img class="img-redonda" src="./profissao-programador.jpg" />
-                        <img src="./arrow-down.png" />
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="title-post-container">
-                    <img class="post-avatar" src="./pia.jpg" />
-                    <div class="post-texts">
-                        <span class="post-title">Portal Informativo Angolano</span>
-                        <span class="post-time">5 de abril às 19:33 · Public</span>
-                    </div>
-                    <div class="medium-button-border"><img src="./mais-opcoes.png" /></div>
-                    <div class="medium-button-border"><img src="./remover.png" /></div>
-                </div>
-                <div class="post-description">
-                    <span>Segundo uma recente pesquisa da Goldman Sachs, os avanços ao nível da Inteligência Artificial podem trazer muitos benefícios significativos quanto à produtividade, mas também afetar uma grande quantidade de empregos. Em concreto, a pesquisa refere-se à possibilidade de automatizar cerca de um quarto de todo o trabalho feito nos Estados Unidos e também na zona Euro.</span>
-                </div>
-                <img class="post-image" src="./post2.jpg" />
-                <div class="post-info">
-                    <div class="likes-container">
-                        <img src="./gostar.png" />
-                        <span>369</span>
-                    </div>
-                    <div class="com-container">
-                        <span>31 comentários</span>
-                        <span>20 compartilhamentos</span>
-                    </div>
-                </div>
-                <div class="post-buttons">
-                    <div class="post-option">
-                        <img src="./gostar2.png" />
-                        <span>Curtir</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./mensagem.png" />
-                        <span>Comentar</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./compartilhar.png" />
-                        <span>Compartilhar</span>
-                    </div>
-                    <div class="post-option">
-                        <img class="img-redonda" src="./profissao-programador.jpg" />
-                        <img src="./arrow-down.png" />
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="title-post-container">
-                    <img class="post-avatar" src="./unitel.jpg" />
-                    <div class="post-texts">
-                        <span class="post-title">Unitel</span>
-                        <span class="post-time">10 de abril às 04:30 · Public</span>
-                    </div>
-                    <div class="medium-button-border"><img src="./mais-opcoes.png" /></div>
-                    <div class="medium-button-border"><img src="./remover.png" /></div>
-                </div>
-                <div class="post-description">
-                    <span>O fundador da gigante tecnológica, META, Mark Zuckerberg divulgou na sua conta do Facebook que a empresa está focada em mecanismos de Inteligência Artificial (AI) generativas como o ChatGPT, para textos, imagens e vídeos. O exemplo usado por Zuckerberg para as IAs de texto foram os aplicativos WhatsApp e o Messenger.</span>
-                </div>
-                <img class="post-image" src="./post3.png" />
-                <div class="post-info">
-                    <div class="likes-container">
-                        <img src="./gostar.png" />
-                        <span>1 mil</span>
-                    </div>
-                    <div class="com-container">
-                        <span>58 comentários</span>
-                        <span>20 compartilhamentos</span>
-                    </div>
-                </div>
-                <div class="post-buttons">
-                    <div class="post-option">
-                        <img src="./gostar2.png" />
-                        <span>Curtir</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./mensagem.png" />
-                        <span>Comentar</span>
-                    </div>
-                    <div class="post-option">
-                        <img src="./compartilhar.png" />
-                        <span>Compartilhar</span>
-                    </div>
-                    <div class="post-option">
-                        <img class="img-redonda" src="./profissao-programador.jpg" />
-                        <img src="./arrow-down.png" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="side-menu right">
-            <div class="menu-section">
-                <div class="header-section">
-                    <span class="section-title">Contatos</span>
-                    <div class="contact-buttons">
-                        <div class="minor-button-border"><img src="./video.png" /></div>
-                        <div class="minor-button-border"><img src="./search.png" /></div>
-                        <div class="minor-button-border"><img src="./mais-opcoes.png" /></div>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./isabel-pesce-mattos.jpg" />
-                    <span>Isabel Pesce Mattos</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./mike-krieger.jpg" />
-                    <span>Mike Krieger</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./paulo-da-silva.jpg" />
-                    <span>Paulo da Silva</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./alex-kipman.jpg" />
-                    <span>Alex Kipman</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./hugo-barra.jpg" />
-                    <span>Hugo Barra</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./ron-czerny.jpg" />
-                    <span>Ron Czerny</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./renato-asse-goncalves.jpg" />
-                    <span>Renato Asse Gonçalves</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./davidson-laponte.jpeg" />
-                    <span>Davidson Lapoint</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./gutembergue-gomes.png" />
-                    <span>Gutembergue Gomes</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./leo-andrade.jpg" />
-                    <span>Léo Andrade</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./cris-acosta.png" />
-                    <span>Cris Acosta</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./ada-lovelace.jpg" />
-                    <span>Ada Lovelace</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./grace-hopper.jpg" />
-                    <span>Grace Hopper</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./alan-turing.jpg" />
-                    <span>Alan Turing</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./margaret-hamilton.jpg" />
-                    <span>Margaret Hamilton</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./dennis-ritchie.jpg" />
-                    <span>Denis Ritchie</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./linus-torvalds.jpg" />
-                    <span>Linus Torvalds</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./John-Backus.jpg" />
-                    <span>John Backus</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./bill-gates.jpg" />
-                    <span>Bill Gates</span>
-                </div>
-                <div class="menu-item">
-                    <img class="img-redonda" src="./Tim-Berners-Lee.jpg" />
-                    <span>Tim Berners-Lee</span>
-                </div>
+                <p><span>Create a Page</span> for a celebrity, brand or business.</p>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="texts-container">
+            <div class="languages-container">
+                <span>English (US)</span>
+                <span>Português (Brasil)</span>
+                <span>Español</span>
+                <span>Français (France)</span>
+                <span>Italiano</span>
+                <span>Deustsch</span>
+                <span>Arabian</span>
+                <span>Korean</span>
+                <span>Japanese</span>
+                <span>Chinese</span>
+                <span><img src="./adicionar.png" /></span>
+            </div>
+            <div class="links-container">
+                <span>Sign Up</span>
+                <span>Log In</span>
+                <span>Messenger</span>
+                <span>Facebook Lite</span>
+                <span>Watch</span>
+                <span>Places</span>
+                <span>Games</span>
+                <span>Marketplace</span>
+                <span>Meta Pay</span>
+                <span>Meta Store</span>
+                <span>Meta Quest</span>
+                <span>Instagram</span>
+                <span>Bulletin</span>
+                <span>Fundraisers</span>
+                <span>Services</span>
+                <span>Voting Information Center</span>
+                <span>Privacy Policy</span>
+                <span>Privacy Center</span>
+                <span>Groups</span>
+                <span>About</span>
+                <span>Create Ad</span>
+                <span>Create Page</span>
+                <span>Developers</span>
+                <span>Careers</span>
+                <span>Cookies</span>
+                <span>Ad choices</span>
+                <span>Terms</span>
+                <span>Help</span>
+                <span>Contacting Uploading & Non-Users</span>
+            </div>
+            <div class="credits">
+                <span>Meta © 2023</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
