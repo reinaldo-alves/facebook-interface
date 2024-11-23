@@ -10,12 +10,12 @@
 *::-webkit-scrollbar {
     width: 6px;
     height: 20px;
-  }
+}
   
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: #3A3B3C;
     border-radius: 20px;
-  }
+}
 
 body {
     background-color: #18191A;
@@ -39,10 +39,12 @@ header {
     display: flex;
 }
 
-.logo-search-container img {
-    height: 40px;
-    width: 40px;
+.logo-search-container svg {
+    color: #4287f5;
+    font-size: 40px;
     margin-right: 7px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .search-container {
@@ -56,10 +58,12 @@ header {
     align-items: center;
 }
 
-.search-container img {
-    width: 16px;
-    height: 16px;
+.search-container svg {
+    color: #b0b3b8;
+    font-size: 18px;
     margin: 0;
+    background-color: transparent;
+    border-radius: 0;
 }
 
 .search-container input {
@@ -89,6 +93,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .pages-icon-container:nth-child(1) {
@@ -101,6 +106,11 @@ header {
 
 .pages-icon-container img {
     height: 24px;
+}
+
+.pages-icon-container svg {
+    color: #B0B3B8;
+    font-size: 24px;
 }
 
 .buttons-container {
@@ -119,6 +129,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .button-border a {
@@ -128,7 +139,7 @@ header {
 }
 
 .button-border:nth-child(4) {
-    background-image: url(./profissao-programador.jpg);
+    background-image: url(../images/profissao-programador.jpg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -228,6 +239,33 @@ header {
     font-weight: 500;
     color: #b0b3b8;
 }
+
+.stories {
+    display: flex;
+    column-gap: 8px;
+}
+
+.storiesCard {
+    width: 100%;
+    aspect-ratio: 11 / 20;
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.storiesCard p {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+
+
+
 
 .post {
     width: 100%;
@@ -407,7 +445,7 @@ header {
     font-weight: 500;
     color: #E4E6Eb;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    line-clamp: 1;
     display: -webkit-box;
     overflow: hidden;
 }
@@ -422,7 +460,7 @@ header {
     font-weight: 500;
     color: #b0b3b8;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    line-clamp: 1;
     display: -webkit-box;
     padding: 0 8px 8px 8px;
 }
@@ -491,6 +529,10 @@ header {
     .search-container {
         width: 40px;
         padding: 0 12px;
+    }
+
+    .search-container input {
+        display: none;
     }
 
     .buttons-container {
