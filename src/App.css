@@ -113,6 +113,10 @@ header {
     font-size: 24px;
 }
 
+.pages-icon-container:nth-child(1) svg {
+    color: #2374e1;
+}
+
 .buttons-container {
     display: flex;
     align-items: center;
@@ -139,14 +143,15 @@ header {
 }
 
 .button-border:nth-child(4) {
-    background-image: url(../images/profissao-programador.jpg);
+    background-image: url(./resources/profissao-programador.jpg);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.button-border img {
-    height: 20px;
+.button-border svg {
+    font-size: 20px;
+    color: #E4E6Eb;
 }
 
 .content {
@@ -159,7 +164,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 20px 0;
+    padding: 15px 0;
     margin-top: 55px;
 }
 
@@ -222,6 +227,8 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .post-option:hover {
@@ -232,6 +239,27 @@ header {
     height: 24px;
     width: 24px;
     margin-right: 5px;
+}
+
+.post-option svg {
+    font-size: 24px;
+    margin-right: 3px;
+}
+
+.post-buttons .post-option svg {
+    color: #B0B3B8
+}
+
+#option-video svg {
+    color: #f02849;
+}
+
+#option-picture svg {
+    color: #45bd62;
+}
+
+#option-feeling svg {
+    color: #f7b928;
 }
 
 .post-option span {
@@ -247,25 +275,34 @@ header {
 
 .storiesCard {
     width: 100%;
+    padding: 10px;
     aspect-ratio: 11 / 20;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
     background-position: center;
     background-size: cover;
     border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.storiesCard:hover {
+    transform: scale(1.02);
+}
+
+.storiesCard img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 4px solid #2374e1;
 }
 
 .storiesCard p {
     color: white;
     font-size: 14px;
     font-weight: 500;
-    padding: 10px;
 }
-
-
-
-
-
 
 .post {
     width: 100%;
@@ -283,8 +320,10 @@ header {
 .post-avatar {
     height: 40px;
     width: 40px;
+    min-width: 40px;
     margin-right: 7px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .post-texts {
@@ -313,19 +352,21 @@ header {
 .medium-button-border {
     height: 36px;
     width: 36px;
+    min-width: 36px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .medium-button-border:hover {
     background-color: #3A3B3C;
 }
 
-.medium-button-border img {
-    height: 20px;
-    width: 20px;
+.medium-button-border svg {
+    font-size: 25px;
+    color: #B0B3B8;
 }
 
 .post-description {
@@ -416,7 +457,7 @@ header {
 }
 
 .menu-item {
-    height: 52px;
+    height: 44px;
     display: flex;
     align-items: center;
     border-radius: 6px;
@@ -432,6 +473,12 @@ header {
 .menu-item img {
     height: 28px;
     width: 28px;
+}
+
+.menu-item svg {
+    font-size: 22px;
+    color: #B0B3B8;
+    margin: 0 2px;
 }
 
 .menu-item .img-redonda {
@@ -451,8 +498,8 @@ header {
 }
 
 .menu-item .button-border {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
 }
 
 .section-title {
@@ -482,11 +529,7 @@ header {
     content: " · ";
 }
 
-.credit-item:nth-child(4):after {
-    content: "";
-}
-
-.credit-item:nth-child(8):after {
+.credit-item:last-child:after {
     content: "";
 }
 
@@ -506,19 +549,212 @@ header {
 .minor-button-border {
     height: 32px;
     width: 32px;
+    min-width: 32px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .minor-button-border:hover {
     background-color: #3A3B3C;
 }
 
-.minor-button-border img {
+.minor-button-border svg {
+    font-size: 20px;
+    color: #B0B3B8;
+}
+
+.login-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container {
+    padding: 72px 0 112px 0;
+    background-color: #f0f2f5;
+    height: 100%;
+}
+
+.info-content {
+    margin: 0 auto;
+    width: 78%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.logo-container img {
+    width: 250px;
+    margin: 0 0 10px 0;
+}
+
+.logo-container p {
+    font-size: 28px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-top: 40px;
+}
+
+.form-container p {
+    margin-top: 28px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.form-container p span {
+    font-weight: bold;
+}
+
+.form-container p span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    padding: 18px 18px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+.form input {
+    width: 100%;
+    padding: 14px 16px;
+    height: 52px;
+    border-radius: 6px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+}
+
+.form input:focus {
+    border: 1px solid #fff;
+    outline: 1px solid #1877f2;
+}
+
+.form span {
+    color: #1877f2;
+    font-size: 14px;
+    padding: 2px 0 20px 0;
+    border-bottom: 1px solid #dddfe2;
+    width: 100%;
+    text-align: center;
+}
+
+.form span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form a {
+    width: 100%;
+    height: 52px;
+    color: #fff;
+}
+
+.login-button {
+    width: 100%;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    height: 52px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.create-button {
+    margin-top: 10px;
+    width: 60%;
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    height: 52px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+footer {
+    padding-top: 20px;
+    background-color: white;
+}
+
+.texts-container {
+    color:#737373;
+    margin: 0 auto;
+    width: 78%;
+}
+
+.languages-container {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.languages-container span {
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.languages-container span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.links-container {
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #dddfe2;
+}
+
+.links-container span {
+    font-size: 12px;
+    padding-right: 20px;
     height: 20px;
-    width: 20px;
+}
+
+.links-container span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.credits {
+    padding: 16px 0;
+}
+
+.credits span {
+    font-size: 11px;
 }
 
 @media (max-width: 1024px) {
@@ -531,20 +767,12 @@ header {
         padding: 0 12px;
     }
 
-    .search-container input {
+    .logo-search-container .search-container input {
         display: none;
     }
 
     .buttons-container {
         width: auto;
-    }
-
-    .pages-icon-container:nth-child(5) {
-        display: none;
-    }
-
-    .pages-icon-container:nth-child(6) {
-        display: flex;
     }
 
     .content {
@@ -564,6 +792,30 @@ header {
         left: 640px;
     }
 
+}
+
+@media (max-width: 900px) {
+    .info-container {
+        height: auto;
+        padding-bottom: 72px;
+    }
+    
+    .info-content {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        align-items: center;
+        width: 75%;
+    }
+
+    .logo-container p {
+        text-align: center;
+    }
+
+    .form-container {
+        width: 75%;
+    }
 }
 
 @media (max-width: 840px) {
@@ -591,6 +843,16 @@ header {
         display: flex;
         justify-content: flex-start;
         width: auto;
+    }
+}
+
+@media (max-width: 580px) {
+    .logo-container {
+        width: 90%;
+    }
+    
+    .form-container {
+        width: 90%;
     }
 }
 
