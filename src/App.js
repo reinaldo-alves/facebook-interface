@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { dbOrderBy, dbCollection, dbOnSnapshot } from "./firebase";
+import { dbOrderBy, dbCollection, dbOnSnapshot, dbDoc, dbSubCollection } from "./firebase";
 import './App.css';
 import FeedForm from './FeedForm';
 import FeedPost from './FeedPost';
@@ -27,7 +27,7 @@ function App() {
     const [posts, setPosts] = useState([]);
     
     useEffect(() => {
-        const dbQuery = dbOrderBy(dbCollection("posts"), 'time', 'asc');
+        const dbQuery = dbOrderBy(dbCollection("posts"), 'timestamp', 'desc');
         const unsubscribe = dbOnSnapshot(dbQuery, (querySnapshot) => {
             const posts = [];
             querySnapshot.forEach((doc) => {
@@ -37,10 +37,35 @@ function App() {
             setPosts(posts);
         });
     }, [])
-
+    
     useEffect(() => {
         console.log(posts)
     }, [posts])
+    
+    const PostItem = ({ post }) => {
+        const [comment, setComment] = useState(0);
+        const [like, setLike] = useState(0);
+
+        useEffect(() => {
+            const postsRef = dbDoc('posts', post.id);
+            const commentsCol = dbSubCollection(postsRef, 'comentarios');
+            const commentQuery = dbOrderBy(commentsCol, 'timestamp', 'asc');
+            const unsubscribeCom = dbOnSnapshot(commentQuery, (querySnapshot) => {
+                setComment(querySnapshot.size);
+            });
+            const likeCol = dbSubCollection(postsRef, 'curtidas');
+            const likeQuery = dbOrderBy(likeCol, 'timestamp', 'desc');
+            const unsubscribeLik = dbOnSnapshot(likeQuery, (querySnapshot) => {
+                setLike(querySnapshot.size);
+            });
+            return () => {
+                unsubscribeCom();
+                unsubscribeLik();
+            }
+        }, [post.id]);
+
+        return <FeedPost profileImage={post.info.profileImage} userName={post.info.userName} timestamp={post.info.timestamp} titulo={post.info.titulo} image={post.info.image} likes={like} comments={comment} shares={Math.ceil(Math.random() * 100)} />
+    }
 
   return (
     <div className="App">
@@ -118,11 +143,11 @@ function App() {
               <FeedForm />
               <Stories />
               {posts.map((item) => (
-                <FeedPost key={item.id} avatar={item.info.avatar} name={item.info.name} date={item.info.date} time={item.info.time} description={item.info.description} image={item.info.image} likes={item.info.likes} comments={item.info.comments} shares={item.info.shares} />
+                <PostItem key={item.id} post={item} />
               ))}
-              <FeedPost avatar={Ne10} name='NE10' date='2 de maio' time='03:00' description='A grande bigtech Google está oferecendo 120 mil bolsas de estudo na área de tecnologia. Os cursos são para pessoas que ainda estão cursando o Ensino Médio, universitários ou até mesmo quem busca o primeiro emprego na área. As bolsas estão disponíveis no site do Centro de Integração Empresa Escola (CIEE) e na plataforma Bettha, que prioriza pessoas de baixa renda, mulheres, comunidades indígenas, pessoas LGBTQIAP+ e moradores das regiões Norte e Nordeste.' image={Post1} likes={75} comments={9} shares={12} />
-              <FeedPost avatar={Pia} name='Portal Informativo Angolano' date='5 de abril' time='19:33' description='Segundo uma recente pesquisa da Goldman Sachs, os avanços ao nível da Inteligência Artificial podem trazer muitos benefícios significativos quanto à produtividade, mas também afetar uma grande quantidade de empregos. Em concreto, a pesquisa refere-se à possibilidade de automatizar cerca de um quarto de todo o trabalho feito nos Estados Unidos e também na zona Euro.' image={Post2} likes={369} comments={31} shares={20} />
-              <FeedPost avatar={Unitel} name='Unitel' date='10 de abril' time='04:30' description='O fundador da gigante tecnológica, META, Mark Zuckerberg divulgou na sua conta do Facebook que a empresa está focada em mecanismos de Inteligência Artificial (AI) generativas como o ChatGPT, para textos, imagens e vídeos. O exemplo usado por Zuckerberg para as IAs de texto foram os aplicativos WhatsApp e o Messenger.' image={Post3} likes={'1 mil'} comments={58} shares={20} />
+              <FeedPost profileImage={Ne10} userName='NE10' timestamp={{seconds: 1732817989, nanoseconds: 712000000}} titulo='A grande bigtech Google está oferecendo 120 mil bolsas de estudo na área de tecnologia. Os cursos são para pessoas que ainda estão cursando o Ensino Médio, universitários ou até mesmo quem busca o primeiro emprego na área. As bolsas estão disponíveis no site do Centro de Integração Empresa Escola (CIEE) e na plataforma Bettha, que prioriza pessoas de baixa renda, mulheres, comunidades indígenas, pessoas LGBTQIAP+ e moradores das regiões Norte e Nordeste.' image={Post1} likes={75} comments={9} shares={12} />
+              <FeedPost profileImage={Pia} userName='Portal Informativo Angolano' timestamp={{seconds: 1732817989, nanoseconds: 712000000}} titulo='Segundo uma recente pesquisa da Goldman Sachs, os avanços ao nível da Inteligência Artificial podem trazer muitos benefícios significativos quanto à produtividade, mas também afetar uma grande quantidade de empregos. Em concreto, a pesquisa refere-se à possibilidade de automatizar cerca de um quarto de todo o trabalho feito nos Estados Unidos e também na zona Euro.' image={Post2} likes={369} comments={31} shares={20} />
+              <FeedPost profileImage={Unitel} userName='Unitel' timestamp={{seconds: 1732817989, nanoseconds: 712000000}} titulo='O fundador da gigante tecnológica, META, Mark Zuckerberg divulgou na sua conta do Facebook que a empresa está focada em mecanismos de Inteligência Artificial (AI) generativas como o ChatGPT, para textos, imagens e vídeos. O exemplo usado por Zuckerberg para as IAs de texto foram os aplicativos WhatsApp e o Messenger.' image={Post3} likes={'1 mil'} comments={58} shares={20} />
           </div>
           <div className="side-menu right">
               <Contacts />

@@ -7,21 +7,32 @@ import BlueLike from "./resources/gostar.png"
 import Profile from "./resources/profissao-programador.jpg"
 
 export default function FeedPost(props) {
+    function convertTime(time) {
+        const convTime = time ? new Date(time.seconds * 1000) : new Date();
+    
+        const formattedDate = convTime.toLocaleDateString('pt-BR', {day: '2-digit', month: 'long', year: 'numeric'});
+        const formattedTime = convTime.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'});
+        return [formattedDate, formattedTime];
+    }
+
+    const date = convertTime(props.timestamp)[0];
+    const time = convertTime(props.timestamp)[1];
+    
     return (
         <div className="post">
             <div className="title-post-container">
-                <img className="post-avatar" src={props.avatar} alt="Imagem de Perfil" />
+                <img className="post-avatar" src={props.profileImage} alt="Imagem de Perfil" />
                 <div className="post-texts">
-                    <span className="post-title">{props.name}</span>
-                    <span className="post-time">{props.date} às {props.time} · Public</span>
+                    <span className="post-title">{props.userName}</span>
+                    <span className="post-time">{date} às {time} · Public</span>
                 </div>
                 <div className="medium-button-border"><MdMoreHoriz /></div>
                 <div className="medium-button-border"><IoClose /></div>
             </div>
             <div className="post-description">
-                <span>{props.description}</span>
+                <span>{props.titulo}</span>
             </div>
-            <img className="post-image" src={props.image} alt={props.description} />
+            <img className="post-image" src={props.image} alt={props.titulo} />
             <div className="post-info">
                 <div className="likes-container">
                     <img src={BlueLike} alt="Likes" />

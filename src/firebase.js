@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, doc, setDoc, updateDoc, deleteDoc, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -7,7 +6,6 @@ import { getFunctions } from "firebase/functions";
 import { firebaseConfig } from "./credential"
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 const db = getFirestore(app);
 const dbCollection = (name) => collection(db, name);
