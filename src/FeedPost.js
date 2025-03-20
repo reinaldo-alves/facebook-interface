@@ -4,7 +4,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegComment, FaAngleDown } from "react-icons/fa";
 import { PiShareFat } from "react-icons/pi";
 import BlueLike from "./resources/gostar.png"
-import Profile from "./resources/profissao-programador.jpg"
+import Profile from "./resources/mark_zuckerberg.jpg"
 
 export default function FeedPost(props) {
     function convertTime(time) {

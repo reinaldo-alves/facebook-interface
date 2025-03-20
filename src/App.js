@@ -9,7 +9,7 @@ import Contacts from './Contacts';
 import { FaAngleDown, FaBookmark, FaHistory } from "react-icons/fa";
 import { MdOutlineOndemandVideo, MdStorefront } from "react-icons/md";
 import { HiOutlineUserGroup } from "react-icons/hi2";
-import Profile from "./resources/profissao-programador.jpg"
+import Profile from "./resources/mark_zuckerberg.jpg"
 import Ne10 from "./resources/ne10.png"
 import Pia from "./resources/pia.jpg"
 import Unitel from "./resources/unitel.jpg"
@@ -75,7 +75,7 @@ function App() {
               <div className="menu-section com-borda">
                   <div className="menu-item">
                       <img className="img-redonda" src={Profile} alt='Imagem de Perfil'/>
-                      <span>Profissão Programador</span>
+                      <span>Mark Zuckerberg</span>
                   </div>
                   <div className="menu-item">
                       <img src={Fri} alt='Amigos' />

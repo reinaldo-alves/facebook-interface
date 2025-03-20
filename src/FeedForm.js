@@ -1,7 +1,7 @@
 import { FaVideo } from "react-icons/fa";
 import { AiOutlineFileImage } from 'react-icons/ai';
 import { CgSmileMouthOpen } from "react-icons/cg";
-import Profile from "./resources/profissao-programador.jpg"
+import Profile from "./resources/mark_zuckerberg.jpg"
 
 export default function FeedForm() {
     return (
@@ -9,7 +9,7 @@ export default function FeedForm() {
             <div className="post-input-container">
                 <img src={Profile} alt="Imagem de Perfil" />
                 <div className="search-container">
-                    <input placeholder="No que você está pensando, Profissão Programador?" />
+                    <input placeholder="No que você está pensando, Mark Zuckerberg?" />
                 </div>
             </div>
             <div className="post-options-container">

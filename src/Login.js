@@ -8,6 +8,12 @@ export default function Login() {
     return (
         <div className="login-body">
             <div className="info-container">
+                <div className="warning-container"> 
+                    <h2>WARNING!</h2>
+                    <h3>This is not the official page of Facebook!</h3>
+                    <p>This is an independent project developed exclusively for educational purposes and to enhance web development skills. It has no affiliation, sponsorship, or association with Facebook. No personal information is collected.</p>
+                    <p>To test the application, click on <b>LOG IN</b>. No email or password is required.</p>
+                </div>
                 <div className="info-content">
                     <div className="logo-container">
                         <img src={Logo} alt="Facebook"/>

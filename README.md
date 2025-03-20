@@ -13,7 +13,7 @@ O website está hospedado no Firebase e no GitHub Pages, clique em um dos links 
 Primeiramente, é preciso acessar a página através de um dos dois links acima ou clonando o repositório e executando os comandos `npm install` e `npm start` para executar a aplicação localmente.
 
 Para acessa o feed, basta clicar no botão Log In (não é necessário inserir email e senha)
-Para retornar à página de login, basta clicar no ícone do Profissão Programador, no canto superior direito.
+Para retornar à página de login, basta clicar na foto de perfil do Mark Zuckerberg, no canto superior direito.
 
 ## Contribua com a Reprodução da interface do Facebook:
 
